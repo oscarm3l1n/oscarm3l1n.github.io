@@ -2,13 +2,15 @@ from pathlib import Path
 import subprocess
 import shutil
 
-class SomethingWentWrong(Exception):
-    ...
 
-PROJECT_DIR = Path('/home', 'omdev', 'dev', 'moj', 'app')
+class SomethingWentWrong(Exception): ...
+
+
+PROJECT_DIR = Path("/home", "omdev", "dev", "moj", "app")
 CWD = Path(__file__).parent
 
-SKIP = ['release.py', '.git']
+SKIP = ["release.py", ".git"]
+
 
 def clean_curr_dir():
     for f in CWD.iterdir():
@@ -21,13 +23,14 @@ def clean_curr_dir():
         else:
             f.unlink()
 
+
 def copy_project_files():
-    cmd = ['cp', '-r', str(PROJECT_DIR/'dist'), '.']
+    cmd = ["cp", "-r", str(PROJECT_DIR / "dist"), "."]
     print(" ".join(cmd))
     if subprocess.call(cmd, cwd=CWD) != 0:
         raise SomethingWentWrong
 
-    dist_path = CWD / 'dist'
+    dist_path = CWD / "dist"
     for f in dist_path.iterdir():
         shutil.move(str(f), str(CWD))
     dist_path.rmdir()
@@ -38,7 +41,6 @@ def main():
     clean_curr_dir()
     copy_project_files()
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main()
-
-
