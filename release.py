@@ -6,7 +6,14 @@ import shutil
 class SomethingWentWrong(Exception): ...
 
 
-PROJECT_DIR = Path("/home", "omdev", "dev", "moj", "app")
+def find_project_dir():
+    print("Finding project path...")
+    return next(iter(Path.home().rglob("moj/app")))
+
+
+PROJECT_DIR = find_project_dir()
+#PROJECT_DIR = Path("/home", "omdev", "dev", "moj", "app")
+
 CWD = Path(__file__).parent
 
 SKIP = ["release.py", ".git"]
