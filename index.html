@@ -2,19 +2,78 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-      rel="stylesheet"
-    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PopuSum &copy; MOJ Productions</title>
-    <script type="module" crossorigin src="/assets/index-BSKtoXhl.js"></script>
+    <title>Oscar - Software Engineer</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        background: #1a1a1a;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      .container {
+        background: #2a2a2a;
+        border-radius: 12px;
+        padding: 60px 40px;
+        max-width: 600px;
+        box-shadow: 0 0 30px rgba(0, 255, 100, 0.2);
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 32px;
+        color: #00ff64;
+        margin-bottom: 20px;
+        text-shadow: 0 0 10px rgba(0, 255, 100, 0.8);
+      }
+
+      p {
+        font-size: 18px;
+        color: #00ff64;
+        line-height: 1.6;
+        margin-bottom: 30px;
+        text-shadow: 0 0 5px rgba(0, 255, 100, 0.5);
+      }
+
+      .highlight {
+        color: #00ff64;
+        font-weight: 600;
+        text-shadow: 0 0 8px rgba(0, 255, 100, 0.8);
+      }
+
+      a {
+        color: #00ff64;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        text-shadow: 0 0 8px rgba(0, 255, 100, 0.8);
+      }
+
+      a:hover {
+        text-shadow: 0 0 20px rgba(0, 255, 100, 1);
+        text-decoration: underline;
+      }
+    </style>
   </head>
 
   <body>
-    <div id="root"></div>
+    <div class="container">
+      <h1>Hello, I'm Oscar</h1>
+      <p>I'm a <span class="highlight">software engineer</span> based in <span class="highlight">Stockholm, Sweden</span>, passionate about building cool projects and solving interesting problems.</p>
+      <p>I'm interested in <span class="highlight">web development</span> (both frontend and backend) and creating games with <span class="highlight">C and C++</span>.</p>
+      <p>Check out my project <span class="highlight">PopuSum</span> — a fun daily geography game where you click on countries to add up their populations to reach a daily goal. New challenges every day! Play it now at <a href="https://popusum.mojprod.eu/" target="_blank">popusum.mojprod.eu</a></p>
+      <hr style="border: none; border-top: 1px solid rgba(0, 255, 100, 0.3); margin: 40px 0;" />
+      <p>Want to reach me? Find me on <a href="https://se.linkedin.com/in/oscar-melin-17b5011a3" target="_blank">LinkedIn</a> or email me at PopuSumMojprod@gmail.com</p>
+    </div>
   </body>
 </html>
